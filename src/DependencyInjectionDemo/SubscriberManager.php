@@ -3,7 +3,6 @@
 namespace DependencyInjectionDemo;
 
 use DependencyInjectionDemo\Notifier\Mailer;
-use DependencyInjectionDemo\Notifier\NotifierInterface;
 use PDO;
 
 
@@ -23,7 +22,7 @@ class SubscriberManager
      * SubscriberManager constructor.
      * @param $pdo
      */
-    public function __construct(PDO $pdo, NotifierInterface $notifier)
+    public function __construct(PDO $pdo, Mailer $notifier)
     {
         $this->pdo = $pdo;
         $this->notifier = $notifier;

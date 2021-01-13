@@ -8,6 +8,8 @@ $container = new Container();
 require __DIR__ . '/config.php';
 require __DIR__ . '/services.php';
 
-/** @var \DependencyInjectionDemo\SubscriberManager $subscriberManager */
+/** 
+ * @var \DependencyInjectionDemo\SubscriberManager $subscriberManager 
+ * */
 $subscriberManager = $container['subscriberManager'];
 $subscriberManager->notifySubscribers();
